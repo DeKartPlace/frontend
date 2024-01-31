@@ -44,10 +44,10 @@ const Dashboard = ({togglePop}) => {
       const user = await response.json()
       try{
       setUser(user)
-      setNop(user.Response.purchased.length)
-      setNol(user.Response.listing.length)
-      setNopen(user.Response.pending.length)
-      setNob(user.Response.bids.length)
+      // setNop(user.Response.purchased.length)
+      // setNol(user.Response.listing.length)
+      // setNopen(user.Response.pending.length)
+      // setNob(user.Response.bids.length)
     }catch(error){
       console.log(error)
     }
@@ -68,7 +68,7 @@ const Dashboard = ({togglePop}) => {
       <div class="users">
         <div class="card">
           <h4>Number of Products Listed</h4>
-          <h3>{nol}</h3>
+          {/* <h3>{nol}</h3> */}
           <div class="per"> 
           </div>
           <button disabled={step===0} onClick={()=>{setStep(0)}}>View</button>
@@ -77,7 +77,7 @@ const Dashboard = ({togglePop}) => {
          
          
           <h4>Number of BIDS</h4>
-          <h3>{nob}</h3>
+          {/* <h3>{nob}</h3> */}
           <div class="per">
           </div>
           <button disabled={step===1} onClick={()=>{setStep(1)}}>View</button>
@@ -85,14 +85,14 @@ const Dashboard = ({togglePop}) => {
         <div class="card">
 
         <h4>Number of PENDING Transactions</h4>
-          <h3>{nopen}</h3>
+          {/* <h3>{nopen}</h3> */}
           <div class="per">
           </div>
           <button disabled={step===2} onClick={()=>{setStep(2)}}>View</button>
         </div>
         <div class="card">
         <h4>Number of Products Purchased</h4>
-          <h3>{nop}</h3>
+          {/* <h3>{nop}</h3> */}
           <div class="per">
           </div>
           <button disabled={step===3} onClick={()=>{setStep(3)}}>View</button>
