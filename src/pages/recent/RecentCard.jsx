@@ -7,9 +7,12 @@ const RecentCard = ({togglePop}) => {
   const load =async()=>{
     const response = await fetch('https://backend-gamma-silk.vercel.app/api/user/allprods', {
       method: 'GET',
-      headers: {'Content-Type': 'application/json'},
-      mode: 'no-cors'
+      headers: {
+        'Content-Type': 'application/json',
+        'Origin': 'https://frontend-amber-tau-20.vercel.app'
+      }
     })
+
     console.log(response)
     const list = await response.json()
     setList(list.prods)
