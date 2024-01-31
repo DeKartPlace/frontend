@@ -17,20 +17,20 @@ const Dashboard = ({togglePop}) => {
     const [nol,setNol]=useState(0)
     const ShowStep = () => {
       switch(step) {
-        case 0:
+        case 1:
           return (
             <Sell togglePop={togglePop} user={user.Response}/>
           );
           
-        case 1:
+        case 2:
           return (
             <Bids togglePop={togglePop} user={user.Response}/>  
           );  
-          case 2:
+          case 3:
             return (
               <Pending togglePop={togglePop} user={user.Response}/>
             ); 
-        case 3:
+        case 4:
           return(
             <Pur togglePop={togglePop} user={user.Response}/>
           );
@@ -71,7 +71,7 @@ const Dashboard = ({togglePop}) => {
           {/* <h3>{nol}</h3> */}
           <div class="per"> 
           </div>
-          <button disabled={step===0} onClick={()=>{setStep(0)}}>View</button>
+          <button disabled={step===0} onClick={()=>{setStep(1)}}>View</button>
         </div>
         <div class="card">
          
@@ -80,7 +80,7 @@ const Dashboard = ({togglePop}) => {
           {/* <h3>{nob}</h3> */}
           <div class="per">
           </div>
-          <button disabled={step===1} onClick={()=>{setStep(1)}}>View</button>
+          <button disabled={step===1} onClick={()=>{setStep(2)}}>View</button>
         </div>
         <div class="card">
 
@@ -88,14 +88,14 @@ const Dashboard = ({togglePop}) => {
           {/* <h3>{nopen}</h3> */}
           <div class="per">
           </div>
-          <button disabled={step===2} onClick={()=>{setStep(2)}}>View</button>
+          <button disabled={step===2} onClick={()=>{setStep(3)}}>View</button>
         </div>
         <div class="card">
         <h4>Number of Products Purchased</h4>
           {/* <h3>{nop}</h3> */}
           <div class="per">
           </div>
-          <button disabled={step===3} onClick={()=>{setStep(3)}}>View</button>
+          <button disabled={step===3} onClick={()=>{setStep(4)}}>View</button>
         </div>
       </div>
     <div>
