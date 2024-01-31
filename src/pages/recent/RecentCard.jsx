@@ -10,6 +10,7 @@ const RecentCard = ({togglePop}) => {
       headers: {'Content-Type': 'application/json'},
       mode: 'no-cors'
     })
+    console.log(response)
     const list = await response.json()
     setList(list.prods)
     // console.log()
