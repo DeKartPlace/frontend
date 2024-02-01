@@ -9,8 +9,9 @@ import Pending from './Pending'
 const Dashboard = ({togglePop}) => {
     const contract =useContext(ContractContext)
     const account=contract.account
+    const user =contract.user
     const [step, setStep] = useState(0);
-    const [user,setUser]=useState({})
+    // const [user,setUser]=useState({})
     const [nop,setNop]=useState(0)
     const [nopen,setNopen]=useState(0)
     const [nob,setNob]=useState(0)
@@ -35,25 +36,25 @@ const Dashboard = ({togglePop}) => {
             <Pur togglePop={togglePop} user={user.Response}/>
           );
       }}
-    const load =async ()=>{
-      const response = await fetch('https://backend-gamma-silk.vercel.app/api/user/getuser', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ "address":account })
-      })
-      const user = await response.json()
-      try{
-      setUser(user)
-      console.log(user)
-      // setNop(user.Response.purchased.length)
-      // setNol(user.Response.listing.length)
-      // setNopen(user.Response.pending.length)
-      // setNob(user.Response.bids.length)
-    }catch(error){
-      console.log(error)
-    }
-      // console.log(user.Response.purchased,"user")
-    }
+    // const load =async ()=>{
+    //   const response = await fetch('https://backend-gamma-silk.vercel.app/api/user/getuser', {
+    //     method: 'POST',
+    //     headers: {'Content-Type': 'application/json'},
+    //     body: JSON.stringify({ "address":account })
+    //   })
+    //   const user = await response.json()
+    //   try{
+    //   setUser(user)
+    //   console.log(user)
+    //   // setNop(user.Response.purchased.length)
+    //   // setNol(user.Response.listing.length)
+    //   // setNopen(user.Response.pending.length)
+    //   // setNob(user.Response.bids.length)
+    // }catch(error){
+    //   console.log(error)
+    // }
+      
+    // }
     
   return (
     <div className='dash-css'>
