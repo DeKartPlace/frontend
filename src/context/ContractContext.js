@@ -25,6 +25,7 @@ export const ContractContextProvider = ({ children }) => {
       const account = await acc.getAddress();
       SetAccount(account)
       setSeller(acc)
+      console.log(account,"connect wal")
     }
     const getUser =async () =>{
       console.log(account,"getuser acc")
