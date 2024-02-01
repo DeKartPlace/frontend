@@ -123,7 +123,7 @@ const Login= () => {
 
                             <div className="social-media">
                                 <button className='social-icon' onClick={handleFbClick}> <i className="fab fa-facebook-f" ></i></button>
-                                <button className='social-icon'> onClick={handleTwClick}><i className="fab fa-twitter"></i></button> 
+                                <button className='social-icon' onClick={handleTwClick}> <i className="fab fa-twitter"></i></button> 
                                 <button className='social-icon' onClick={handleGClick}> <i className="fab fa-google" ></i></button>
                              <button className='social-icon' onClick={handleGitClick}> <i className="fab fa-github" ></i></button> 
                              </div>
