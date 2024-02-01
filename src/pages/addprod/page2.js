@@ -39,11 +39,10 @@ const page2 = ({formData,setFormData}) => {
     </div>
     
 
-    <div className="custom-input3">
-      <input type="file" id="address" placeholder=" "  />
-      <label htmlFor="name">Photos*</label>
-      <div className="small-text">Upload the pictures of product</div>
-
+    <div className="custom-input2">
+      <input type="text" id="address" placeholder=" " value={formData.img} onChange={(e)=>setFormData({...formData, img:e.target.value})} />
+      <label htmlFor="name">Photo URL*</label>
+      {/* <div className="small-text">Enter the Photo URL</div> */}
     </div>
   
 

@@ -21,7 +21,7 @@ const Mainform = () => {
     uname: "",
     description: "",
     category: "",
-    image: "",
+    img: "",
     condition: "",
     price: 0,
     phone: "",
@@ -47,18 +47,14 @@ const Mainform = () => {
         await transaction.wait()
         var blockchainId =await market.productIndex();
         blockchainId=await blockchainId.toString();
-        await list(blockchainId,formData.uname,formData.description,formData.category,"img",formData.price,formData.phone,formData.city,formData.address,formData.state,formData.email,formData.pincode,formData.condition,account)
-        console.log(blockchainId,formData.uname,formData.description,formData.category,"img","123",formData.phone,formData.city,formData.address,formData.state,formData.email,formData.pincode,formData.condition)
+        await list(blockchainId,formData.uname,formData.description,formData.category,formData.img,formData.price,formData.phone,formData.city,formData.address,formData.state,formData.email,formData.pincode,formData.condition,account)
         alert("Product added successfully")
     }
     catch(error){
       console.log(error)
       alert("Prod not added")
     }  
-    // console.log('Form submitted:',);
-    // 
-    // console.log("productIndex : ",productIndex.toString());
-    // // console.log(await market.connect(provider).getProduct(1))
+    
   };
 
 
