@@ -50,7 +50,14 @@ const Sell = ({togglePop,user}) => {
     </thead>
     <tbody>
       {products.map((product,index) => (
-        <TableRow key={index} product={product} togglePop={togglePop} index={index+1}/>
+        <tr>
+        <td>{index+1}</td>
+        <td>{product.uname}</td>
+        <td>{product.des}</td>
+        {/* <td>{product.date}</td> */}
+        <td>{product.price}</td>
+        <td><button onClick={() => handleClick(product.blockchainId,togglePop)}>View</button></td>
+      </tr>
       ))}
     </tbody>
     </table>
