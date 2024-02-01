@@ -24,14 +24,17 @@ export const ContractContextProvider = ({ children }) => {
       const acc = await provider.getSigner();
       const account = await acc.getAddress();
       SetAccount(account)
+      setSeller(acc)
     }
     const getUser =async () =>{
+      console.log(account,"getuser acc")
       const response = await fetch('https://backend-gamma-silk.vercel.app/api/user/getuser', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({ "address":account })
       })
       const user = await response.json()
+      console.log(user,"getUser res")
       setUser(user)
     }
     connectWallet()
