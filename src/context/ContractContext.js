@@ -17,6 +17,7 @@ export const ContractContextProvider = ({ children }) => {
     const market = new ethers.Contract('0x1Ad4FDBAcCC919E8575a546Bd2dc6534Bb50c8f7', Marketplace['abi'], provider);
     console.log(market)
     setMarket(market);
+    getAccountAddress();
   }, []);
 
   async function getAccountAddress() {
