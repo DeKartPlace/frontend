@@ -54,9 +54,7 @@ const Dashboard = ({togglePop}) => {
     }
       // console.log(user.Response.purchased,"user")
     }
-    useEffect(()=>{
-      load()
-},[])
+    
   return (
     <div className='dash-css'>
   <div class="container5">
