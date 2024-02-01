@@ -17,7 +17,13 @@ export const ContractContextProvider = ({ children }) => {
     const market = new ethers.Contract('0x1Ad4FDBAcCC919E8575a546Bd2dc6534Bb50c8f7', Marketplace['abi'], provider);
     console.log(market)
     setMarket(market);
-    getAccountAddress();
+    const connectWallet = async () => {
+      await provider.send("eth_requestAccounts", []);
+      const acc = await provider.getSigner();
+      const account = await acc.getAddress();
+      SetAccount(account)
+    }
+    connectWallet()
   }, []);
 
   async function getAccountAddress() {
@@ -27,8 +33,6 @@ export const ContractContextProvider = ({ children }) => {
       const acc = await provider.getSigner();
       const account = await acc.getAddress();
       SetAccount(account)
-      
-    //   console.log("Account address:", signer);
       setSeller(acc)
     } catch (error) {
       console.error("Error getting account address:", error);
