@@ -5,7 +5,7 @@ import { useAuthContext } from '../../hooks/useAuthContext'
 import './login.css'
 import img2 from '../../images/img2.svg'
 import img3 from '../../images/img3.svg'
-import { auth, Fbprovider, Gprovider, Gitprovider } from '../../firebase.config';
+import { auth, Fbprovider, Gprovider, Gitprovider, Twprovider } from '../../firebase.config';
 import { signInWithPopup } from 'firebase/auth';
 
 const Login= () => {
@@ -44,6 +44,13 @@ const Login= () => {
             console.log(err,"error")
         })
     }
+         const handleTwClick=()=>{
+      signInWithPopup(auth,Twprovider).then((res)=>{
+          console.log(res,"userData")
+      }).catch((err)=>{
+          console.log(err,"error")
+      })
+  }
 
         const handleSigninSubmit = async (e) => {
             e.preventDefault()
@@ -116,7 +123,7 @@ const Login= () => {
 
                             <div className="social-media">
                                 <button className='social-icon' onClick={handleFbClick}> <i className="fab fa-facebook-f" ></i></button>
-                               {/* <button className='social-icon'> <i className="fab fa-twitter"></i></button> */}
+                                <button className='social-icon'> onClick={handleTwClick}><i className="fab fa-twitter"></i></button> 
                                 <button className='social-icon' onClick={handleGClick}> <i className="fab fa-google" ></i></button>
                              <button className='social-icon' onClick={handleGitClick}> <i className="fab fa-github" ></i></button> 
                              </div>
