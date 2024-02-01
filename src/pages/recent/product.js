@@ -91,7 +91,7 @@ const Product = ({ val, togglePop }) => {
 
       const { img,  des, uname, price,state,city,pincode,phone,email,address,category,blockchainId,bids,productStatus} = val
 
-        if (productStatus==1) {  
+        if (productStatus==0 || productStatus==1) {  
             try{        
             market.connect(provider).highestBidderInfo(blockchainId).then((highestbid) => {
                 setHighestBidder(highestbid[0])

@@ -9,7 +9,7 @@ export const ContractContextProvider = ({ children }) => {
   const [provider, setProvider] = useState('');
   const [account,SetAccount]=useState('')
   const [seller,setSeller]=useState('')
-  const [user,setUser]=useState({})
+  // const [user,setUser]=useState({})
 
   useEffect(() => {
     const provider = new ethers.BrowserProvider(window.ethereum);
@@ -25,29 +25,15 @@ export const ContractContextProvider = ({ children }) => {
       const account = await acc.getAddress();
       SetAccount(account)
       setSeller(acc)
-      const response = await fetch('https://backend-gamma-silk.vercel.app/api/user/getuser', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ "address":account })
-      })
-      const user = await response.json()
-      setUser(user)
-      console.log(account,"connect wal")
-      console.log(user,"getUser res")
-    }
-    const getUser =async () =>{
-      console.log(account,"getuser acc")
-      const response = await fetch('https://backend-gamma-silk.vercel.app/api/user/getuser', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ "address":account })
-      })
-      const user = await response.json()
-      console.log(user,"getUser res")
-      setUser(user)
+      // const response = await fetch('https://backend-gamma-silk.vercel.app/api/user/getuser', {
+      //   method: 'POST',
+      //   headers: {'Content-Type': 'application/json'},
+      //   body: JSON.stringify({ "address":account })
+      // })
+      // const user = await response.json()
+      // setUser(user)
     }
     connectWallet()
-    // getUser()
   }, []);
 
   async function getAccountAddress() {
@@ -64,7 +50,7 @@ export const ContractContextProvider = ({ children }) => {
   }
 
   return (
-    <ContractContext.Provider value={{ market,provider,account,getAccountAddress,seller,user }}>
+    <ContractContext.Provider value={{ market,provider,account,getAccountAddress,seller}}>
       {children}
     </ContractContext.Provider>
   );
