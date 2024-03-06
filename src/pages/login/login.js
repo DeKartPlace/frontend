@@ -130,8 +130,6 @@ const Login= () => {
                     <div className="panel left-panel">
                         <div className="content">
                             <h3>New Here?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nihil ab, dolor nostrum ullam quas quibusdam repellendus eligendi maxime dolorem culpa voluptatum perferendis reprehenderit eaque neque? Aut nisi tempora error.</p>
-
                             <button className='btn transparent' id='sign-up-btn' onClick={handleSignUpClick}>Sign Up</button>
                         </div>
                         <img src={img2}alt="" class ='image'/>
@@ -140,8 +138,6 @@ const Login= () => {
                     <div className="panel right-panel">
                         <div className="content">
                             <h3>One of us ?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nihil ab, dolor nostrum ullam quas quibusdam repellendus eligendi maxime dolorem culpa voluptatum perferendis reprehenderit eaque neque? Aut nisi tempora error.</p>
-
                             <button className='btn transparent' id='sign-in-btn' onClick={handleSignInClick}>Sign In</button>
                         </div>
                         <img src={img3}alt="" class ='image'/>
