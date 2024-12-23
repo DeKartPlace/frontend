@@ -13,7 +13,7 @@ const AboutUs = () => {
           <div className="about-category">
             <span>Backend Developer</span>
             <p>
-              <strong>Karthik Kuppili</strong> -{' '}
+              <strong>Karthik Kuppili</strong> {' '}
               <a href="mailto:karthikkuppili.offl@gmail.com">karthikkuppili.offl@gmail.com</a>
               <br />
               Phone: 9100388576
@@ -22,7 +22,7 @@ const AboutUs = () => {
           <div className="about-category">
             <span>Web3 Developer</span>
             <p>
-              <strong>Puneeth Narra</strong> -{' '}
+              <strong>Puneeth Narra</strong> {' '}
               <a href="mailto:narrapuneeth44@gmail.com">narrapuneeth44@gmail.com</a>
               <br />
               Phone: 9652585354
@@ -31,7 +31,7 @@ const AboutUs = () => {
           <div className="about-category">
             <span>Frontend Developer</span>
             <p>
-              <strong>Thirush Reddy Chada</strong> -{' '}
+              <strong>Thirush Reddy Chada</strong> {' '}
               <a href="mailto:thirushreddychada@gmail.com">thirushreddychada@gmail.com</a>
               <br />
               Phone: 7815962448
