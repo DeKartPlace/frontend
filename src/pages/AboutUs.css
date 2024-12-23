@@ -12,7 +12,7 @@
 .about-text h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: #27ae60; /* Green accent for the heading */
 }
 
 .about-text p {
@@ -27,7 +27,7 @@
   margin: 10px;
   padding: 20px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 2px solid #27ae60; /* Green border */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   vertical-align: top;
@@ -38,7 +38,7 @@
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #555;
+  color: #27ae60; /* Green accent for category titles */
 }
 
 .about-category p {
@@ -49,10 +49,17 @@
 }
 
 .about-category a {
-  color: #007BFF;
+  color: #27ae60; /* Green links */
   text-decoration: none;
+  font-weight: bold;
 }
 
 .about-category a:hover {
   text-decoration: underline;
+}
+
+/* Ensure the phone number appears on the next line */
+.about-category p strong {
+  display: inline-block;
+  margin-bottom: 5px;
 }
