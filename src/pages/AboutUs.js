@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../common/Header'; // Updated import path
+import Header from './common/Header'; // Updated import path
 import './AboutUs.css';
 
 const AboutUs = () => {
